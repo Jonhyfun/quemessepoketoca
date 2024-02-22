@@ -22,9 +22,9 @@ export default function Home() {
       className={`flex min-h-screen flex-col items-center justify-between p-24 bg-white ${amsi.className}`}
     >
       <div style={{ left: `${size - 25}px`, top: `${(size / 2) + 100}px` }} className="fixed grid grid-cols-3 bg-teal-800 h-16 w-[650px]">
-        <span style={{ textShadow: '0px 0px 9px BLACK' }} onClick={() => setDica1((current) => !current)} className="flex cursor-pointer justify-center items-center w-full h-full text-4xl -mt-1">{!dica1 ? '' : params.get('dica1').toUpperCase()}</span>
-        <span style={{ textShadow: '0px 0px 9px BLACK' }} onClick={() => setDica2((current) => !current)} className="flex cursor-pointer justify-center items-center w-full h-full text-4xl -mt-1">{!dica2 ? '' : params.get('dica2').toUpperCase()}</span>
-        <span style={{ textShadow: '0px 0px 9px BLACK' }} onClick={() => setDica3((current) => !current)} className="flex cursor-pointer justify-center items-center w-full h-full text-4xl -mt-1">{!dica3 ? '' : params.get('dica3').toUpperCase()}</span>
+        <span style={{ textShadow: '0px 0px 9px BLACK' }} onClick={() => setDica1((current) => !current)} className="flex cursor-pointer justify-center items-center w-full h-full text-4xl -mt-1">{!dica1 ? '' : params.get('dica1')?.toUpperCase()}</span>
+        <span style={{ textShadow: '0px 0px 9px BLACK' }} onClick={() => setDica2((current) => !current)} className="flex cursor-pointer justify-center items-center w-full h-full text-4xl -mt-1">{!dica2 ? '' : params.get('dica2')?.toUpperCase()}</span>
+        <span style={{ textShadow: '0px 0px 9px BLACK' }} onClick={() => setDica3((current) => !current)} className="flex cursor-pointer justify-center items-center w-full h-full text-4xl -mt-1">{!dica3 ? '' : params.get('dica3')?.toUpperCase()}</span>
       </div>
       <div className="fixed top-[50px] left-[0px] bg-teal-800"
         style={{
