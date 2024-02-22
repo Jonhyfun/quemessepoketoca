@@ -1,11 +1,9 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
-import { useEffect, useMemo, useState } from "react";
+import { useState } from "react";
 import { useParams, useSearchParams } from "next/navigation";
 import Draggable from "react-draggable";
-import { GetServerSidePropsResult } from "next";
+import localFont from 'next/font/local'
 
-const inter = Inter({ subsets: ["latin"] });
+const amsi = localFont({ src: './AmsiProCond-UltraItalic.woff' })
 
 const size = 475 * 1.5;
 
@@ -21,12 +19,12 @@ export default function Home() {
   return (
     <main
       style={{ background: `url('https://static.quizur.com/i/b/57c1c26fc0b812.5998420157c1c26fb156c9.51498011.png')`, backgroundSize: `1360px 765px`, backgroundRepeat: `no-repeat` }}
-      className={`flex min-h-screen flex-col items-center justify-between p-24 bg-white ${inter.className}`}
+      className={`flex min-h-screen flex-col items-center justify-between p-24 bg-white ${amsi.className}`}
     >
       <div style={{ left: `${size - 25}px`, top: `${(size / 2) + 100}px` }} className="fixed grid grid-cols-3 bg-teal-800 h-16 w-[650px]">
-        <span onClick={() => setDica1((current) => !current)} className="flex justify-center items-center w-full h-full font-semibold text-2xl">{!dica1 ? '' : params.get('dica1')}</span>
-        <span onClick={() => setDica2((current) => !current)} className="flex justify-center items-center w-full h-full font-semibold text-2xl">{!dica2 ? '' : params.get('dica2')}</span>
-        <span onClick={() => setDica3((current) => !current)} className="flex justify-center items-center w-full h-full font-semibold text-2xl">{!dica3 ? '' : params.get('dica3')}</span>
+        <span style={{ textShadow: '0px 0px 9px BLACK' }} onClick={() => setDica1((current) => !current)} className="flex justify-center items-center w-full h-full text-4xl -mt-1">{!dica1 ? '' : params.get('dica1')}</span>
+        <span style={{ textShadow: '0px 0px 9px BLACK' }} onClick={() => setDica2((current) => !current)} className="flex justify-center items-center w-full h-full text-4xl -mt-1">{!dica2 ? '' : params.get('dica2')}</span>
+        <span style={{ textShadow: '0px 0px 9px BLACK' }} onClick={() => setDica3((current) => !current)} className="flex justify-center items-center w-full h-full text-4xl -mt-1">{!dica3 ? '' : params.get('dica3')}</span>
       </div>
       <div className="fixed top-[50px] left-[0px] bg-teal-800"
         style={{
